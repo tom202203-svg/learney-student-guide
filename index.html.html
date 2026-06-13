@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI 문해력 프로그램 학생 사용 안내</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#1f2937;--muted:#64748b;--main:#4f46e5;--soft:#eef2ff;--line:#e5e7eb;--ok:#0f766e;--warn:#b45309}
+*{box-sizing:border-box} body{margin:0;font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+a{color:inherit}.wrap{max-width:980px;margin:auto;padding:24px}.hero{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border-radius:28px;padding:42px 34px;box-shadow:0 18px 45px rgba(79,70,229,.22)}
+.hero h1{margin:0 0 8px;font-size:clamp(30px,5vw,52px);line-height:1.2}.hero p{margin:0;font-size:18px;opacity:.94}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.chip{background:rgba(255,255,255,.17);border:1px solid rgba(255,255,255,.25);padding:7px 11px;border-radius:999px;font-size:14px}
+.nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px;margin:22px 0}.nav a{text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;text-align:center;font-weight:700;box-shadow:0 5px 18px rgba(15,23,42,.05)}
+.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:18px;padding:16px 18px;margin:18px 0;color:#7c2d12}.section{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;margin:18px 0;box-shadow:0 8px 26px rgba(15,23,42,.05)}
+.section h2{margin:0 0 8px;font-size:26px}.lead{color:var(--muted);margin:0 0 18px}.steps{counter-reset:step;display:grid;gap:12px}.step{position:relative;padding:15px 16px 15px 54px;background:#f8fafc;border-radius:16px;border:1px solid #eef2f7}.step:before{counter-increment:step;content:counter(step);position:absolute;left:14px;top:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--main);color:#fff;font-weight:800}
+.tip{margin-top:14px;background:var(--soft);border-left:5px solid var(--main);padding:14px 16px;border-radius:12px}.time{display:inline-block;font-size:13px;font-weight:800;color:var(--warn);background:#fffbeb;padding:5px 9px;border-radius:999px;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.mini{padding:16px;border:1px solid var(--line);border-radius:16px;background:#fff}.mini b{display:block;margin-bottom:5px}.screen{margin-top:15px;border:1px solid #e5e7eb;border-radius:18px;padding:12px;background:#f8fafc}.screen img{display:block;width:100%;height:auto;border-radius:12px}.screen small{display:block;margin-top:8px;text-align:center;color:#64748b}
+.check{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:14px}.check div{background:#ecfdf5;color:#065f46;padding:12px 14px;border-radius:14px;font-weight:700}.footer{text-align:center;color:var(--muted);padding:24px 8px 40px;font-size:14px}.top{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border:none;border-radius:50%;background:var(--main);color:#fff;font-size:22px;cursor:pointer;box-shadow:0 10px 25px rgba(79,70,229,.35)}
+@media(max-width:620px){.wrap{padding:14px}.hero{padding:30px 22px;border-radius:22px}.section{padding:22px 18px}.nav{grid-template-columns:repeat(2,1fr)}}
+@media print{body{background:#fff}.wrap{max-width:none}.hero,.section{box-shadow:none}.nav,.top{display:none}.section{break-inside:avoid}}
+</style>
+</head>
+<body id="top">
+<div class="wrap">
+<header class="hero">
+  <div style="font-weight:800;letter-spacing:.04em">학생용 사용 안내</div>
+  <h1>AI 문해력 프로그램<br>이렇게 사용해요!</h1>
+  <p>로그인부터 맞춤 학습, 퀴즈, 복습까지 차근차근 따라 해 보세요.</p>
+  <div class="chips"><span class="chip">학생 전용</span><span class="chip">쉬운 단계별 설명</span><span class="chip">개인정보 보호</span></div>
+</header>
+
+<nav class="nav" aria-label="바로가기">
+<a href="#login">🔐 로그인</a><a href="#my">🏠 나의 학습</a><a href="#class">💬 클래스 학습</a><a href="#today">📘 오늘의 학습</a><a href="#quiz">⚡ 오늘의 퀴즈</a><a href="#review">🔁 복습하기</a><a href="#record">🏅 활동 기록</a>
+</nav>
+
+<div class="notice"><b>꼭 기억해요!</b> 선생님이 알려 준 계정은 다른 사람에게 알려 주지 않아요. 학습이 끝나면 반드시 로그아웃해요.</div>
+
+<section class="section" id="login">
+<h2>1. 로그인하기</h2><p class="lead">선생님이 발급한 계정으로 학생용 서비스에 접속해요.</p>
+<div class="steps"><div class="step">선생님이 알려 준 학생용 서비스 주소로 이동해요.</div><div class="step">이메일 또는 아이디와 비밀번호를 정확하게 입력해요.</div><div class="step">로그인 버튼을 누르면 ‘나의 학습’ 화면이 나타나요.</div></div>
+<div class="tip">비밀번호를 잊었거나 로그인이 되지 않으면 여러 번 시도하지 말고 선생님께 알려요.</div>
+<div class="screen"><img src="images/로그인하기.png" alt="회원가입 및 로그인 안내 화면"><small>학생 개인 정보가 드러나지 않도록 예시 정보로 바꾼 화면입니다.</small></div>
+</section>
+
+<section class="section" id="my">
+<h2>2. 나의 학습 살펴보기</h2><p class="lead">로그인하면 세 가지 학습 메뉴를 확인할 수 있어요.</p>
+<div class="grid"><div class="mini"><b>클래스 학습</b>선생님이 수업에 맞게 골라 준 학습이에요.</div><div class="mini"><b>오늘의 학습</b>나의 학습 결과에 따라 매일 제공되는 맞춤 학습이에요.</div><div class="mini"><b>오늘의 퀴즈</b>학년에 맞는 필수 단어를 짧은 퀴즈로 익혀요.</div></div>
+<div class="tip">학습 카드를 누른 뒤에는 정해진 시간 안에 끝내야 해요.</div>
+<div class="grid" style="margin-top:15px">
+      <div class="screen"><img src="images/나의학습_클래스학습.png" alt="클래스 학습 메뉴 위치"><small>클래스 학습</small></div>
+      <div class="screen"><img src="images/나의학습_오늘의학습.png" alt="오늘의 학습 메뉴 위치"><small>오늘의 학습</small></div>
+      <div class="screen"><img src="images/나의학습_오늘의퀴즈.png" alt="오늘의 퀴즈 메뉴 위치"><small>오늘의 퀴즈</small></div>
+    </div>
+</section>
+
+<section class="section" id="class">
+<span class="time">학습 가능 시간: 카드 선택 후 2시간</span><h2>3. 클래스 학습하기</h2><p class="lead">선생님이 선정한 주제를 AI 선생님과 대화하며 학습해요.</p>
+<div class="steps"><div class="step"><b>시작</b><br>학습 목표와 AI 선생님의 설명을 읽고 무엇을 배울지 살펴봐요.</div><div class="step"><b>단어 학습</b><br>핵심 단어의 뜻을 익혀요. 모르는 단어는 힌트에서 유의어·반의어·예문을 확인해요.</div><div class="step"><b>틀 만들기</b><br>글의 내용을 이해하기 위한 생각의 틀을 만들어요.</div><div class="step"><b>학습</b><br>안내에 따라 읽고, 생각하고, 질문에 답해요.</div><div class="step"><b>평가와 정리</b><br>배운 내용을 확인하고 마지막 정리까지 마쳐요.</div></div>
+<div class="tip">보기의 단어를 정답 칸으로 끌어 놓는 활동에서는 천천히 뜻을 비교해 보세요.</div>
+</section>
+
+<section class="section" id="today">
+<span class="time">학습 가능 시간: 카드 선택 후 24시간</span><h2>4. 오늘의 맞춤 학습하기</h2><p class="lead">나의 학습 결과에 맞춰 매일 새로운 학습이 제공돼요.</p>
+<div class="grid"><div class="mini"><b>① 단어 학습</b>핵심 단어와 뜻을 익혀요.</div><div class="mini"><b>② 끊어 읽고 요약하기</b>문장을 의미 단위로 나누어 읽고 핵심 내용을 정리해요.</div><div class="mini"><b>③ 구조화하기</b>글의 중요한 내용을 관계와 순서에 맞게 정리해요.</div><div class="mini"><b>④ 문제 풀이</b>글을 이해했는지 문제를 풀며 확인해요.</div><div class="mini"><b>⑤ 정리</b>오늘 배운 내용을 다시 살펴봐요.</div></div>
+<div class="tip">정답을 빨리 찾는 것보다 글을 정확히 읽고 근거를 찾는 것이 더 중요해요.</div>
+</section>
+
+<section class="section" id="quiz">
+<h2>5. 오늘의 퀴즈 풀기</h2><p class="lead">매일 1분, 짧은 퀴즈로 어휘 실력을 길러요.</p>
+<div class="steps"><div class="step">‘나의 학습’에서 오늘의 퀴즈를 눌러요.</div><div class="step">화면에 나온 단어의 뜻을 읽고 알맞은 답을 선택해요.</div><div class="step">결과를 확인해요.</div><div class="step">틀린 문제는 해설을 읽고 다시 익혀요.</div></div>
+<div class="tip">맞힌 문제도 뜻을 말로 설명해 보면 오래 기억할 수 있어요.</div>
+</section>
+
+<section class="section" id="review">
+<h2>6. 복습하기</h2><p class="lead">완료한 학습의 결과를 다시 보며 부족한 부분을 채워요.</p>
+<div class="steps"><div class="step">완료한 학습 중 복습할 학습을 선택해요.</div><div class="step">미흡한 단계가 있으면 ‘결과 다시 보기’를 눌러요.</div><div class="step">해설을 읽으며 무엇을 왜 틀렸는지 확인해요.</div><div class="step">상단 메뉴 또는 이전·다음 버튼으로 다른 단계도 살펴봐요.</div></div>
+<div class="tip">학습을 제출하지 않으면 복습할 수 없으니 마지막 제출까지 꼭 확인해요.</div>
+</section>
+
+<section class="section" id="record">
+<h2>7. 활동 기록 확인하기</h2><p class="lead">내가 얼마나 꾸준히 학습했는지 직접 확인해요.</p>
+<div class="grid"><div class="mini"><b>학습 현황</b>주·월·연도별 학습 기록을 확인할 수 있어요.</div><div class="mini"><b>나의 업적</b>출석과 학습을 꾸준히 하면 업적이 쌓여요.</div></div>
+<div class="steps" style="margin-top:12px"><div class="step">화면 위쪽의 ‘활동 기록’을 눌러요.</div><div class="step">학습 현황에서 나의 꾸준함을 확인해요.</div><div class="step">‘나의 업적’과 ‘모든 업적 보기’에서 받은 업적을 살펴봐요.</div></div>
+</section>
+
+<section class="section">
+<h2>학습 전 마지막 확인 ✅</h2>
+<div class="check"><div>□ 내 계정으로 로그인했나요?</div><div>□ 이어폰과 소리를 확인했나요?</div><div>□ 학습 시간을 확인했나요?</div><div>□ 마지막 제출까지 완료했나요?</div><div>□ 틀린 문제를 복습했나요?</div><div>□ 사용 후 로그아웃했나요?</div></div>
+</section>
+
+<footer class="footer">본 안내 자료는 학생 사용에 필요한 내용만 정리한 교육용 페이지입니다.<br>학교명 · 담당 교사 · 학생용 접속 주소는 배포 전에 수정해 주세요.</footer>
+</div>
+<button class="top" onclick="location.href='#top'" aria-label="맨 위로">↑</button>
+</body></html>
